@@ -1,0 +1,29 @@
+import re
+text = "My email is test123@gmail.com and phone is 9876543210"
+pattern_digits = r"\d+"
+pattern_words = r"[a-zA-Z]+"
+
+#match – checks only at start
+print("match:", re.match(pattern_words, text))
+
+
+#search – first match anywhere
+print("search:", re.search(pattern_digits, text).group())
+
+
+#findall – all matches
+print("findall:", re.findall(pattern_digits, text))
+
+
+#finditer – iterator of matches
+print("finditer:")
+for m in re.finditer(pattern_digits, text):
+    print(m.group(), "at index", m.start())
+
+
+#fullmatch – whole string match
+print("fullmatch:", re.fullmatch(pattern_digits, text))
+
+
+#sub – replace
+print("sub:", re.sub(pattern_digits, "X", text))

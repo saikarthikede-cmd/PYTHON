@@ -1,0 +1,17 @@
+#generator
+def demo():
+    print("Start")
+    yield 1
+    print("Middle")
+    yield 2
+    print("End")
+    yield 3
+g = demo()
+
+#after yield it stops and pauses
+#only after calling it again it resumes
+#calling or if a loop exists
+
+print(next(g))
+print(next(g))
+print(next(g))

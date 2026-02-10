@@ -1,0 +1,4 @@
+def pt(nums):
+    for n in nums:
+        yield n
+print(list(pt([1,2,3,4,5])))

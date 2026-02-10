@@ -1,0 +1,7 @@
+#generator
+def gen_nums():
+    yield 1
+    yield 2
+    yield 3
+for n in gen_nums():
+    print(n)
